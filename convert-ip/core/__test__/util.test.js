@@ -10,4 +10,8 @@ describe('getType', () => {
     expect(getType('3')).toBe(digitType);
     expect(() => getType('a')).toThrow();
   });
+  test('type is binary', () => {
+    expect(spaceType & dotType & digitType).toBe(0);
+    expect(spaceType | dotType | digitType).toBe(0b111);
+  })
 });

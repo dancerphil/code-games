@@ -17,4 +17,8 @@ describe('core', () => {
   test('throw when number invalid', () => {
     expect(() => converter('333.168.5.1')).toThrow();
   });
+  test('throw when byte length invalid', () => {
+    expect(() => converter('172.168.5')).toThrow();
+    expect(() => converter('172.168.5.1.1')).toThrow();
+  });
 });

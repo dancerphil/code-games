@@ -1,7 +1,7 @@
 /* ---- types ---- */
-export const spaceType = 0x100;
-export const dotType = 0x010;
-export const digitType = 0x001;
+export const spaceType = 0b100;
+export const dotType = 0b010;
+export const digitType = 0b001;
 
 export const getType = (node) => {
   if(node === ' ') {
@@ -27,7 +27,7 @@ export const init = () => {
   charStack = [];
   numberStack = [];
   preType = dotType;
-  waitType = 0x111;
+  waitType = 0b111;
 }
 
 const convertNumber = () => {
@@ -46,20 +46,20 @@ export const dealWith = node => {
   }
   switch (type) {
     case digitType:
-      waitType = 0x111; // space && dot && digit
+      waitType = 0b111; // space && dot && digit
       charStack.push(node);
       preType = type;
       return;
     case dotType:
-      waitType = 0x111; // space && dot && digit
+      waitType = 0b111; // space && dot && digit
       convertNumber();
       preType = type;
       return;
     case spaceType:
       if(preType === digitType) {
-        waitType = 0x110; // space && dot
+        waitType = 0b110; // space && dot
       } else {
-        waitType = 0x111; // space && dot && digit
+        waitType = 0b111; // space && dot && digit
       }
       return;
     default:
@@ -69,5 +69,8 @@ export const dealWith = node => {
 
 export const toString = () => {
   convertNumber();
+  if(numberStack.length !== 4){
+    throw Erroe('Invalid ip byte length');
+  }
   return numberStack[0] * 16777216 + numberStack[1] * 65536 + numberStack[2] * 256 + numberStack[3];
 }
