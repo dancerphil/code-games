@@ -1,6 +1,6 @@
-import '../restrict-int-polyfill';
+import '../number-restrict';
 
-describe('leetcode restrict-int-polyfill', () => {
+describe('polyfill number-restrict', () => {
   test('value', () => {
     expect(Number(0).restrict()).toBe(0);
     expect(Number(42).restrict()).toBe(42);

@@ -1,4 +1,4 @@
-import '../util/restrict-int-polyfill';
+import '../polyfill/number-restrict';
 
 export default function(str) {
   const reg = /^[-+]*\d+/g;

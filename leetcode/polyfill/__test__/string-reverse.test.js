@@ -1,6 +1,6 @@
-import '../string-reverse-polyfill';
+import '../string-reverse';
 
-describe('leetcode string-reverse-polyfill', () => {
+describe('polyfill string-reverse', () => {
   test('value', () => {
     expect('abc'.reverse()).toBe('cba');
     expect('支持中文以及 unicode'.reverse()).toBe('edocinu 及以文中持支');
