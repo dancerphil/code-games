@@ -2,7 +2,7 @@ import '../polyfill/array-flatten';
 
 const combination = (bottom, upper, prefix = '') => {
   if (bottom < upper) {
-    throw Error('invalid');
+    return [];
   }
   if (upper === 0) {
     let str = prefix;

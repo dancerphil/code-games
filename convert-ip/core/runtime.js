@@ -62,8 +62,8 @@ export const dealWith = node => {
         waitType = 0b111; // space && dot && digit
       }
       return;
-    default:
-      return;
+    // default:
+    // no way to arrive code here.
   }
 }
 

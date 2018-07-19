@@ -7,7 +7,7 @@ Object.defineProperty(Object.prototype, 'findKey', {
         return key;
       }
     }
-    return null;
+    return undefined;
   },
   writable: false
 });
