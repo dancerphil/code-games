@@ -1,3 +1,5 @@
 # Code Games
 
-basic jest environment
+## Thanks
+
+[javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
