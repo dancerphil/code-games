@@ -49,28 +49,28 @@ export const dealWith = (node) => {
       waitType = 0b111; // space && dot && digit
       charStack.push(node);
       preType = type;
-      return;
+      break;
     case dotType:
       waitType = 0b111; // space && dot && digit
       convertNumber();
       preType = type;
-      return;
+      break;
     case spaceType:
       if (preType === digitType) {
         waitType = 0b110; // space && dot
       } else {
         waitType = 0b111; // space && dot && digit
       }
-
-    // default:
-    // no way to arrive code here.
+      break;
+    default:
+      // no way to arrive code here.
   }
 };
 
 export const toString = () => {
   convertNumber();
   if (numberStack.length !== 4) {
-    throw Erroe('Invalid ip byte length');
+    throw Error('Invalid ip byte length');
   }
   return numberStack[0] * 16777216 + numberStack[1] * 65536 + numberStack[2] * 256 + numberStack[3];
 };
