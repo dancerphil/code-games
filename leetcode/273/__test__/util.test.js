@@ -6,7 +6,7 @@ describe('273 util', () => {
     expect(hundredToWords(9)).toBe('Nine');
     expect(hundredToWords(30)).toBe('Thirty');
     expect(hundredToWords(39)).toBe('Thirty Nine');
-  })
+  });
 
   test('chunkToWords', () => {
     expect(chunkToWords(0)).toBe('');
@@ -21,5 +21,5 @@ describe('273 util', () => {
     expect(chunkToWords(409)).toBe('Four Hundred Nine');
     expect(chunkToWords(430)).toBe('Four Hundred Thirty');
     expect(chunkToWords(439)).toBe('Four Hundred Thirty Nine');
-  })
+  });
 });

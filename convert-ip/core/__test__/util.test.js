@@ -1,4 +1,4 @@
-import { spaceType, dotType, digitType, getType } from "../runtime";
+import { spaceType, dotType, digitType, getType } from '../runtime';
 
 describe('getType', () => {
   test('value', () => {
@@ -13,5 +13,5 @@ describe('getType', () => {
   test('type is binary', () => {
     expect(spaceType & dotType & digitType).toBe(0);
     expect(spaceType | dotType | digitType).toBe(0b111);
-  })
+  });
 });

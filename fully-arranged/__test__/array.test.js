@@ -8,12 +8,12 @@ describe('fully arranged', () => {
       ['b', 'a', 'c'],
       ['b', 'c', 'a'],
       ['c', 'a', 'b'],
-      ['c', 'b', 'a']
+      ['c', 'b', 'a'],
     ]);
     expect(arranged('ab')).toEqual([['a', 'b'], ['b', 'a']]);
-  })
+  });
   test('get rest', () => {
     expect(getRest(['a', 'b', 'c'], 0)).toEqual({ word: ['a'], rest: ['b', 'c'] });
     expect(getRest(['a', 'b', 'c'], 1)).toEqual({ word: ['b'], rest: ['a', 'c'] });
-  })
+  });
 });

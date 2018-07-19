@@ -11,5 +11,5 @@ describe('8', () => {
     expect(myAtoi('-')).toBe(0);
     expect(myAtoi('+')).toBe(0);
     expect(myAtoi('-5-')).toBe(-5);
-  })
+  });
 });

@@ -10,5 +10,5 @@ describe('273', () => {
     expect(numberToWords(0)).toBe('Zero');
     expect(numberToWords(1000)).toBe('One Thousand');
     expect(numberToWords(1000010)).toBe('One Million Ten');
-  })
+  });
 });
