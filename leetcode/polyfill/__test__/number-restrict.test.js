@@ -9,5 +9,6 @@ describe('polyfill number-restrict', () => {
   });
   test('return 0 when NaN', () => {
     expect(Number('some string').restrict()).toBe(0);
+    expect(Number(NaN).restrict()).toBe(0);
   });
 });
