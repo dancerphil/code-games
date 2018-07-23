@@ -1,31 +1,21 @@
+import './sortedFindIndex';
+
 export default (arr, target) => {
-  if (arr.length === 0) {
+  const index = arr.sortedFindIndex(target);
+  if (index === undefined) {
     return undefined;
   }
-  let left = 0;
-  let right = arr.length;
-  while (right - left > 1) {
-    const mid = Math.floor((left + right) / 2);
-    const value = arr[mid];
-    if (value === target) {
-      return [mid];
-    }
-    if (value < target) {
-      left = mid;
-    } else {
-      right = mid;
-    }
-  }
-  const leftValue = arr[left];
-  const rightValue = arr[right];
+
+  const leftValue = arr[index];
+  const rightValue = arr[index + 1];
   if (!rightValue) {
-    return [left];
+    return [index];
   }
   if (target - leftValue === rightValue - target) {
-    return [left, right];
+    return [index, index + 1];
   }
   if (target - leftValue < rightValue - target) {
-    return [left];
+    return [index];
   }
-  return [right];
-}
+  return [index + 1];
+};

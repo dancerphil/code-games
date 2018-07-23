@@ -5,16 +5,17 @@ function uniq(array, isEqual) {
   for (let i = 0; i < array.length; i++) {
     const value = array[i];
     if (result.find(item => isEqual(item, value))) {
-      continue;
+      // do nothing
+    } else {
+      result.push(value);
     }
-    result.push(value);
   }
   return result;
 }
 
 
 export default (nums, target) => {
-  nums.sort((a, b) => (a === b ? 0 : a < b ? -1 : 1));
+  nums.sort((a, b) => a - b);
   const ans = [];
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
