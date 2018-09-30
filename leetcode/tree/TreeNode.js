@@ -1,6 +1,7 @@
 export default function TreeNode(val) {
   this.val = val;
-  this.left = this.right = null;
+  this.left = null;
+  this.right = null;
 }
 
 const pushToArray = (ans, node) => {
