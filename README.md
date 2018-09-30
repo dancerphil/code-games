@@ -5,3 +5,5 @@
 ## Thanks
 
 [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
+
+[mathjs](https://github.com/josdejong/mathjs)
