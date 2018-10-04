@@ -1,6 +1,7 @@
 import TreeNode from '../tree/TreeNode';
 
 const recurseWithPath = (node, path, func) => {
+  path = path.slice();
   const { val, left, right } = node;
   path.push(val);
   if (left === null && right === null) {

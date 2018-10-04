@@ -26,6 +26,29 @@ export const inorderTraversal = (root) => {
   return ans;
 };
 
+export const inorderTraversalLoop = (root) => {
+  if (!root) return [];
+  const ans = [];
+  let node = root;
+  const stack = [];
+  while (true) {
+    if (node.left !== null) {
+      const tmp = node.left;
+      node.left = null;
+      stack.push(node);
+      node = tmp;
+    } else {
+      ans.push(node.val);
+      if (node.right !== null) {
+        node = node.right;
+      } else {
+        node = stack.pop();
+        if (!node) return ans;
+      }
+    }
+  }
+};
+
 const postorderRecurse = (ans, node) => {
   const { val, left, right } = node;
   if (left) postorderRecurse(ans, left);
