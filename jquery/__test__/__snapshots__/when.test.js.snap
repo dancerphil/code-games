@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when equals Promise.all Deferred 1`] = `
+Array [
+  Object {
+    "a": 1,
+  },
+]
+`;
+
+exports[`when equals Promise.all Deferred 2`] = `
+Array [
+  Object {
+    "b": 1,
+  },
+  Object {
+    "c": 1,
+  },
+]
+`;
+
+exports[`when equals Promise.all plain object 1`] = `Array []`;
+
+exports[`when equals Promise.all plain object 2`] = `
+Array [
+  Object {
+    "a": 1,
+  },
+]
+`;
+
+exports[`when equals Promise.all plain object 3`] = `
+Array [
+  Object {
+    "a": 1,
+  },
+  Object {
+    "b": 2,
+  },
+]
+`;
