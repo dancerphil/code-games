@@ -1,3 +1,3 @@
 # Code Games
 
-basic jest environment
+test of package behavior
