@@ -1,16 +1,17 @@
 /* eslint-disable no-fallthrough */
 
-// TODO 优化内存，主动 GC
 const numDecodings = (s) => {
-  const map = {};
+  let p1 = 1;
+  let p2 = 1;
 
-  const getValue = str => map[str] || 0;
+  const getValue = i => (i === 1 ? p1 : p2);
 
   const setMap = (target, a, b) => {
-    const x = getValue(target.slice(1));
-    const y = getValue(target.slice(2));
+    const x = getValue(1);
+    const y = getValue(2);
     const ans = (a * x + b * y) % (10 ** 9 + 7);
-    map[target] = ans;
+    p2 = p1;
+    p1 = ans;
     return ans;
   };
 
@@ -70,7 +71,6 @@ const numDecodings = (s) => {
   if (s.startsWith('0')) {
     return 0;
   }
-  map[''] = 1;
   for (let i = s.length - 1; i >= 0; i--) {
     const target = s.slice(i);
     const result = dealWith(target);
@@ -78,7 +78,7 @@ const numDecodings = (s) => {
       return 0;
     }
   }
-  return map[s];
+  return p1;
 };
 
 export default numDecodings;
