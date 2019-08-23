@@ -7,6 +7,7 @@ module.exports = {
   "rules": {
     "max-len": "off", // no force newline
     "no-bitwise": "off",
+    "no-continue": "off",
     "no-extend-native": "off", // polyfill
     "no-plusplus": "off",
     "object-curly-newline": "off", // no force newline

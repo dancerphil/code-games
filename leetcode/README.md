@@ -107,6 +107,7 @@
 | 682 | stack |
 | 692 | toCount + countToFrequency + sort |
 | 693 | toString(2) + shouldBe = i % 2 === 0 ? '1' : '0' |
+| 696 | code |
 | 703 | ! |
 | 704 | findIndex |
 | 717 | 遇到 1 就 step = 2 |
@@ -122,6 +123,7 @@
 | 859 | stack + toCount + find |
 | 860 | ! |
 | 867 | ! |
+| 868 | toString(2) |
 | 877 | 先手必胜 |
 | 954 | toCount + 贪心 + 正负 |
 | 1078 | filter |
