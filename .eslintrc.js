@@ -9,6 +9,7 @@ module.exports = {
     "no-bitwise": "off",
     "no-continue": "off",
     "no-extend-native": "off", // polyfill
+    "no-mixed-operators": "off",
     "no-plusplus": "off",
     "object-curly-newline": "off", // no force newline
     "object-property-newline": "off", // no force newline
