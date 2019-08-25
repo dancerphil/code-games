@@ -25,9 +25,11 @@
 | 65 | isNaN |
 | 66 | ! |
 | 69 | Math |
+| 78 | ! |
 | 80 | 双指针 |
 | 81 | find |
 | 89 | 递归，末尾的 pattern 是 0110 |
+| 90 | ! + _.uniqBy + JSON.stringify |
 | 91 | code |
 | 118 | ! |
 | 119 | 181 + 打表 |
@@ -64,6 +66,7 @@
 | 287 | toCount |
 | 290 | 双向 dict |
 | 292 | Boolean(n % 4) |
+| 315 | _.sortedIndex |
 | 319 | sqrt 完全平方数的个数 |
 | 326 | 打表 |
 | 338 | 每 1, 2, 4, 8, 16, ... 重复，并在原有的数字上 + 1 |
@@ -88,6 +91,7 @@
 | 451 | toCount + countToFrequency + sort |
 | 461 | ^ + toCount |
 | 476 | log 得到位数 + ^ |
+| 493 | _.sortedIndex |
 | 496 | stack |
 | 500 | replace new RegExp(, 'g') |
 | 504 | toString(7) |
@@ -99,6 +103,7 @@
 | 605 | ! |
 | 628 | sort 3正/1正2负，没有负数的情况并不例外 |
 | 633 | - ** 2 + isSquare |
+| 639 | code dp |
 | 645 | toCount |
 | 649 | 队列 |
 | 650 | 递归，因数的和 |
@@ -116,6 +121,7 @@
 | 746 | 动态规划 |
 | 747 | ! |
 | 766 | ! |
+| 784 | ! |
 | 793 | 关键数字在 6, 31, 156, ... keyNumber = 5 * keyNumber + 1 |
 | 825 | sort + 解析几何 |
 | 844 | stack + isEqual |
@@ -125,8 +131,10 @@
 | 867 | ! |
 | 868 | toString(2) |
 | 877 | 先手必胜 |
+| 888 | sort + 双指针 |
 | 954 | toCount + 贪心 + 正负 |
 | 1078 | filter |
+| 1010 | ! |
 | 1114 | Semaphore |
 | 1115 | Semaphore |
 
