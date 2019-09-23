@@ -184,6 +184,7 @@
 | 661 | ! |
 | 680 | reverse + ! |
 | 682 | stack |
+| 684 | createUnionFindSet |
 | 692 | toCount + countToFrequency + sort |
 | 693 | toString(2) + shouldBe = i % 2 === 0 ? '1' : '0' |
 | 696 | code |
