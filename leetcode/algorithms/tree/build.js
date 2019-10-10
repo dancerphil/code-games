@@ -1,4 +1,4 @@
-import TreeNode from './TreeNode';
+import TreeNode from '../../dataStructure/TreeNode';
 
 export const preorderBuildTree = (preorder, inorder) => {
   if (preorder.length === 0) return [];

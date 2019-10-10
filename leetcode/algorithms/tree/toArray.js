@@ -1,9 +1,3 @@
-export default function TreeNode(val) {
-  this.val = val;
-  this.left = null;
-  this.right = null;
-}
-
 const pushToArray = (ans, node) => {
   if (node === null) {
     ans.push(null);
@@ -21,10 +15,12 @@ const recurseToArray = (ans, node) => {
   recurseToArray(ans, right);
 };
 
-export const toArray = (node) => {
+const toArray = (node) => {
   const ans = [];
   pushToArray(ans, node);
   recurseToArray(ans, node);
   while (ans[ans.length - 1] === null)ans.pop();
   return ans;
 };
+
+export default toArray;

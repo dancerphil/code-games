@@ -1,4 +1,4 @@
-import ListNode from '../list/ListNode';
+import ListNode from '../dataStructure/ListNode';
 
 Object.defineProperty(ListNode.prototype, 'toArray', {
   value: function toArray() {

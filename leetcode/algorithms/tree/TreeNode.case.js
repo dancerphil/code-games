@@ -1,4 +1,4 @@
-import TreeNode from './TreeNode';
+import TreeNode from '../../dataStructure/TreeNode';
 
 let i = 0;
 

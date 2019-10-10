@@ -1,4 +1,4 @@
-import TreeNode from '../tree/TreeNode';
+import TreeNode from '../dataStructure/TreeNode';
 
 const recurseWithPath = (node, path, func) => {
   path = path.slice();

@@ -1,4 +1,5 @@
-import TreeNode, { toArray } from '../TreeNode';
+import TreeNode from '../../../dataStructure/TreeNode';
+import toArray from '../toArray';
 import cases from '../TreeNode.case';
 
 describe('TreeNode', () => {

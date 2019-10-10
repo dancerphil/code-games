@@ -1,5 +1,5 @@
+import testcases from '../../algorithms/tree/TreeNode.case';
 import '../tree-recurse';
-import testcases from '../../tree/TreeNode.case';
 
 describe('polyfill tree-recurse', () => {
   test('value', () => {

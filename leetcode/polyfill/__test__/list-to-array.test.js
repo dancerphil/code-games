@@ -1,4 +1,4 @@
-import ListNode from '../../list/ListNode';
+import ListNode from '../../dataStructure/ListNode';
 import '../list-to-array';
 
 describe('polyfill list-to-array', () => {
