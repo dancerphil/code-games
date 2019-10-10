@@ -28,3 +28,5 @@ const createUnionFindSet = () => {
   const toValue = () => Fa;
   return { find, union, init, count, toValue };
 };
+
+export default createUnionFindSet;

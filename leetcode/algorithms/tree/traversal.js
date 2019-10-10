@@ -31,6 +31,8 @@ export const inorderTraversalLoop = (root) => {
   const ans = [];
   let node = root;
   const stack = [];
+
+  // eslint-disable-next-line no-constant-condition
   while (true) {
     if (node.left !== null) {
       const tmp = node.left;
