@@ -24,6 +24,9 @@
     "codecov": "jest --coverage && codecov",
     "lint": "eslint --ignore-path .gitignore ./"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "husky": {
     "hooks": {
       "pre-push": "yarn lint && yarn test --coverage"
