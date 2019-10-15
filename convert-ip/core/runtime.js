@@ -45,25 +45,27 @@ export const dealWith = (node) => {
     throw Error(`Invalid char: ${node}, type: ${type}`);
   }
   switch (type) {
-    case digitType:
+    case digitType: {
       waitType = 0b111; // space && dot && digit
       charStack.push(node);
       preType = type;
       break;
-    case dotType:
+    }
+    case dotType: {
       waitType = 0b111; // space && dot && digit
       convertNumber();
       preType = type;
       break;
+    }
     case spaceType:
+    default: {
       if (preType === digitType) {
         waitType = 0b110; // space && dot
       } else {
         waitType = 0b111; // space && dot && digit
       }
       break;
-    default:
-      // no way to arrive code here.
+    }
   }
 };
 

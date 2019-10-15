@@ -6,11 +6,11 @@ module.exports = {
   },
   "rules": {
     "max-len": "off", // no force newline
-    "no-bitwise": "off",
-    "no-continue": "off",
+    "no-bitwise": "off", // using bitwise
+    "no-continue": "off", // using continue
     "no-extend-native": "off", // polyfill
-    "no-mixed-operators": "off",
-    "no-plusplus": "off",
+    "no-mixed-operators": "off", // + - * / **
+    "no-plusplus": "off", // using i++
     "object-curly-newline": "off", // no force newline
     "object-property-newline": "off", // no force newline
 

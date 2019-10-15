@@ -17,8 +17,7 @@ const createClosure = () => {
     }
     listeners.push(callback);
     return () => {
-      const index = listeners.findIndex(item => item === callback);
-      listeners.splice(index, 1);
+      listeners.splice(listeners.indexOf(callback), 1);
     };
   };
 

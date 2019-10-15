@@ -17,7 +17,6 @@ const workWith = (prefix, strings) => {
   return results;
 };
 
-export default (string) => {
-  const results = workWith([], string.split(''));
-  return results;
-};
+const permute = nums => workWith([], nums);
+
+export default permute;

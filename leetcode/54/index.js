@@ -28,14 +28,14 @@ export default function (matrix) {
         bottom--;
         break;
       }
-      case 3: {
+      case 3:
+      default: {
         for (let i = bottom; i >= top; i--) {
           arr.push(matrix[i][left]);
         }
         left++;
         break;
       }
-      default:
     }
     loop = (loop + 1) % 4;
   }
