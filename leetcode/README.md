@@ -21,9 +21,11 @@
 | 33 | findIndex |
 | 35 | findIndex |
 | 41 | toCount |
+| 46 | code |
 | 48 | ! |
 | 50 | ** |
 | 54 | code |
+| 59 | ! vectors |
 | 65 | isNaN |
 | 66 | ! |
 | 69 | Math |
@@ -133,6 +135,7 @@
 | 406 | code |
 | 412 | ! |
 | 414 | ? |
+| 419 | createUnionFindSet |
 | 432 | _.maxBy |
 | 441 | sqrt 要么是 sqrt 要么是 sqrt - 1 |
 | 442 | toCount |
@@ -244,6 +247,8 @@
 | 1115 | Semaphore |
 | 1137 | dp |
 | 1162 | 四方向暴力 |
+| 1221 | ! |
+| LCP 1 | _.zip ? |
 
 ## footnote
 
