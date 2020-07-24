@@ -257,9 +257,26 @@
 | 1115 | Semaphore |
 | 1137 | dp |
 | 1162 | 四方向暴力 |
-| 1207 | toCount
+| 1207 | toCount |
 | 1221 | ! |
-| LCP 1 | _.zip ? |
+| 1266 | ! |
+| 1281 | toArray |
+| 1290 | ! |
+| 1295 | Math.log10 |
+| 1313 | _.chunk + Array(a).fill(b) |
+| 1342 | ! |
+| 1365 | toCount + reduce |
+| 1389 | splice |
+| 1431 | _.max |
+| 1450 | filter |
+| 1470 | _.flatten _.unzip |
+| 1480 | reduce |
+| 1486 | ^= |
+| 1512 | toCount |
+| LCP 01 | _.zip ? |
+| LCP 06 | Math.ceil |
+| 剑指 58 - II | slice |
+| 面试 02.03 | ! |
 
 ## footnote
 
