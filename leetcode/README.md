@@ -259,24 +259,38 @@
 | 1162 | 四方向暴力 |
 | 1207 | toCount |
 | 1221 | ! |
+| 1252 | (n - rowFlip) * colFlip + rowFlip * (m - colFlip) |
 | 1266 | ! |
 | 1281 | toArray |
 | 1290 | ! |
 | 1295 | Math.log10 |
+| 1299 | ! |
 | 1313 | _.chunk + Array(a).fill(b) |
 | 1342 | ! |
+| 1351 | _.flatten |
 | 1365 | toCount + reduce |
 | 1389 | splice |
 | 1431 | _.max |
+| 1436 | _.difference |
 | 1450 | filter |
+| 1464 | sort |
 | 1470 | _.flatten _.unzip |
 | 1480 | reduce |
 | 1486 | ^= |
+| 1502 | ! |
 | 1512 | toCount |
 | LCP 01 | _.zip ? |
 | LCP 06 | Math.ceil |
+| 剑指 05 | replace(/ /g, '%20') |
+| 剑指 06 | reverse |
+| 剑指 17 | Array.from |
+| 剑指 22 | 双指针 |
+| 剑指 27 | ! |
+| 剑指 55 - I | ! |
 | 剑指 58 - II | slice |
+| 面试 02.02 | 双指针 |
 | 面试 02.03 | ! |
+| 面试 04.02 | 二分 |
 
 ## footnote
 
