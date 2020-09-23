@@ -16,6 +16,16 @@ import {
 const dummyObject = { dummy: 'dummy' };
 const dummyError = new Error('dummy');
 
+const createSemiDone = (done, times) => {
+  let calledTimes = 0;
+  return () => {
+    calledTimes++;
+    if (calledTimes === times) {
+      done();
+    }
+  };
+};
+
 describe('Promise basic apis', () => {
   test('Promise api shape', () => {
     expect(typeof Promise).toBe('function');
@@ -855,5 +865,102 @@ describe('`onFulfilled` and `onRejected` must be called as functions (i.e. with 
   });
 });
 
+// TODO test three cases
+
+describe('`then` may be called multiple times on the same promise.', () => {
+  describe('when `promise` is fulfilled, all `onfulfilled` handlers are called in the original order.', () => {
+    test('already-fulfilled', (done) => {
+      const semiDone = createSemiDone(done, 6);
+
+      const promise = Promise.resolve(dummyObject);
+      const order = [];
+
+      const spy = jest.fn();
+      const handler0 = jest.fn();
+
+      const handlerInside = () => {
+        order.push(4);
+        return 4;
+      };
+
+      const handler1 = () => {
+        order.push(1);
+        return 1;
+      };
+
+      const handler2 = () => {
+        order.push(2);
+        const promiseThenInside = promise.then(handlerInside, spy);
+        promiseThenInside.then((result) => {
+          expect(result).toBe(4);
+          semiDone();
+        });
+
+        promise.then(() => {
+          expect(order).toEqual([1, 2, 3, 4]);
+          semiDone();
+        });
+
+        return 2;
+      };
+
+      const handler3 = () => {
+        order.push(3);
+        // eslint-disable-next-line no-throw-literal
+        throw 3;
+      };
+
+      promise.then(handler0, spy);
+
+      const promiseThen1 = promise.then(handler1, spy);
+      const promiseThen2 = promise.then(handler2, spy);
+      const promiseThen3 = promise.then(handler3, spy);
+
+      promiseThen1.then((result) => {
+        expect(result).toBe(1);
+        semiDone();
+      });
+
+      promiseThen2.then((result) => {
+        expect(result).toBe(2);
+        semiDone();
+      });
+
+      promiseThen3.then(null, (reason) => {
+        expect(reason).toBe(3);
+        semiDone();
+      });
+
+      promise.then(() => {
+        expect(handler0).toBeCalledWith(dummyObject);
+        expect(spy).not.toBeCalled();
+        expect(order).toEqual([1, 2, 3]);
+        semiDone();
+      });
+    });
+  });
+});
+
+describe('often seen cases', () => {
+  test('microtask', (done) => {
+    const stack = [];
+    new Promise((resolve) => {
+      stack.push(1);
+      resolve();
+      stack.push(2);
+    }).then(() => {
+      stack.push(3);
+    });
+    stack.push(4);
+    setTimeout(() => {
+      stack.push(5);
+    }, 0);
+
+    setTimeout(() => {
+      expect(stack).toEqual([1, 2, 4, 3, 5]);
+      done();
+    }, 50);
+  });
+});
 // TODO deal with SyntaxError
 // TODO promise.finally(() => { throw new Error('') })
