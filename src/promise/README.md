@@ -6,6 +6,8 @@ Inspired by [Maples7/clean-promise](https://github.com/Maples7/clean-promise)
 
 ## APIs
 
+> node@16.13.0
+
 - Promise.all()
 
 - Promise.allSettled()
