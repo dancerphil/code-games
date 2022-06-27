@@ -8,7 +8,7 @@
     "lint": "skr lint"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mathjs": "^10.6.3"
   },
   "devDependencies": {
