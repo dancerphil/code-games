@@ -28,5 +28,6 @@ module.exports = {
         'no-return-assign': 'off',
         'max-lines': 'off',
         'func-names': 'off',
+        '@typescript-eslint/prefer-for-of': 'off',
     },
 };
