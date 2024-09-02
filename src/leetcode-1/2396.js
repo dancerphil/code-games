@@ -1,0 +1,1 @@
+const isStrictlyPalindromic = n => false;
