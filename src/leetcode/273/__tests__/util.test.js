@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import {hundredToWords, chunkToWords} from '../index';
 
 describe('273 util', () => {

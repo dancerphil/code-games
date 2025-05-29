@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import countBinarySubstrings from '../index';
 
 describe('696', () => {

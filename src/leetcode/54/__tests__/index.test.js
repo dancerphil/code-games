@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import spiralOrder from '../index';
 
 describe('18', () => {

@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../sortedFindIndex';
 
 describe('polyfill array-sorted-find-index', () => {

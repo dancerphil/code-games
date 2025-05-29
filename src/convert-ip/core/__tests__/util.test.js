@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import {spaceType, dotType, digitType, getType} from '../runtime';
 
 describe('getType', () => {

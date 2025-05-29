@@ -1,4 +1,4 @@
-
+/* eslint-disable no-param-reassign */
 // event loop hook
 const nextTick = (process && process.nextTick) || setTimeout;
 

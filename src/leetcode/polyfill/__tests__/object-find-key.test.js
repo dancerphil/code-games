@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../object-find-key';
 
 describe('polyfill object-find-key', () => {

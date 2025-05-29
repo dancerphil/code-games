@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../array-flatten';
 
 describe('polyfill array-flatten', () => {

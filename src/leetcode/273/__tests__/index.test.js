@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import numberToWords from '../index';
 
 describe('273', () => {

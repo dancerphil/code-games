@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../array-to-count';
 
 describe('polyfill array-to-count', () => {

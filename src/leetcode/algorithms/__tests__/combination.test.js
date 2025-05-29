@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import combination from '../combination';
 
 describe('algorithm combination', () => {

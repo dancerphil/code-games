@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import findClosest from '../findClosest';
 
 describe('algorithm findClosest', () => {

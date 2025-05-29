@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../Array-is-equal';
 
 describe('polyfill Array-is-equal', () => {

@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import dailyTemperatures from '../index';
 
 describe('739', () => {

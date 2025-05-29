@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../array-max';
 
 describe('polyfill array-max', () => {

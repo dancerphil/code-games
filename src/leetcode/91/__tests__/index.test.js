@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import numDecodings from '../index';
 
 describe('91', () => {

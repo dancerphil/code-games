@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import {preorderTraversal, inorderTraversal, postorderTraversal} from '../traversal';
 import {preorderBuildTree, postorderBuildTree} from '../build';
 import cases from '../TreeNode.case';

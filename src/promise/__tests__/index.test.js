@@ -1,4 +1,5 @@
-/* eslint-disable prefer-promise-reject-errors */
+/* eslint-disable prefer-promise-reject-errors, max-lines */
+import {describe, test as testRaw, expect, vi} from 'vitest';
 import {
     getAlreadyFulfilledPromise,
     getImmediatelyFulfilledPromise,
@@ -12,6 +13,18 @@ import {
     exceptPromiseRejectedWith,
     Promise,
 } from './utils';
+
+const composeDone = async (fn) => {
+    let done = null;
+    const p = new Promise((resolve) => {
+        done = resolve;
+    });
+    await fn(done);
+};
+
+const test = (description, fn) => {
+    testRaw(description, composeDone(fn));
+};
 
 const dummyObject = {dummy: 'dummy'};
 const dummyError = new Error('dummy');
@@ -875,8 +888,8 @@ describe('`then` may be called multiple times on the same promise.', () => {
             const promise = Promise.resolve(dummyObject);
             const order = [];
 
-            const spy = jest.fn();
-            const handler0 = jest.fn();
+            const spy = vi.fn();
+            const handler0 = vi.fn();
 
             const handlerInside = () => {
                 order.push(4);

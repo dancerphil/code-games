@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import maxProfit from '../index';
 import maxProfitDynamic from '../dynamic';
 

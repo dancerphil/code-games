@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../number-restrict';
 
 describe('polyfill number-restrict', () => {

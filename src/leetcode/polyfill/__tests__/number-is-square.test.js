@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../number-is-square';
 
 describe('polyfill number-is-square', () => {

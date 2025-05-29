@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import findMaxLength from '../index';
 
 describe('525', () => {

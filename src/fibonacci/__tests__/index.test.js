@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import {fibonacci, tribonacci} from '../index';
 
 describe('fibonacci', () => {

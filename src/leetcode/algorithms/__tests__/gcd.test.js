@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import {gcd, lcm} from '../gcd';
 
 describe('algorithm gcd', () => {

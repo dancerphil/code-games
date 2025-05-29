@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import filterPrime from '../index';
 
 describe('filter-prime', () => {

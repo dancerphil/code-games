@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../string-reverse';
 
 describe('polyfill string-reverse', () => {

@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import '../number-to-array';
 
 describe('polyfill number-to-array', () => {

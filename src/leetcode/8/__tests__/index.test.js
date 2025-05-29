@@ -1,3 +1,4 @@
+import {describe, test, expect} from 'vitest';
 import myAtoi from '../index';
 
 describe('8', () => {
